@@ -1,0 +1,14 @@
+{
+ "extends": ["stylelint-config-recommended-scss",
+              "stylelint-config-recess-order"],
+   "ignoreFiles": [
+        "src/assets/styles/tailwind.scss"
+    ],
+ "rules": {                         
+    "color-no-invalid-hex": true,    
+    "color-hex-length": "long",  
+    "comment-no-empty": true,
+    "no-duplicate-selectors": true,
+    "media-query-no-invalid": true
+ }
+}

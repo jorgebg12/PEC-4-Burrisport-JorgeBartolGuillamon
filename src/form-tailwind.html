@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Formulario de inscripción utilizando tailwind">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/tailwind.scss"><!-- do not remove this line! -->
+    <title>PEC-4 | Form-taildwind</title>
+  </head>
+  <body class="home">
+
+    <include src="./views/header-tailwind.html"></include>
+    
+    <main>
+
+      <div class="common-container">
+
+        <h1 class="text-4xl my-3">¡Apuntate!</h1>
+        <p>¿Te quieres apuntar al club? ¡Nos alegra que estés interesado en unirte a nuestra comunidad de apasionados atletas! Aquí podrás inscribirte para formar parte de nuestro club de atletismo, donde te ofrecemos una plataforma para mejorar tus habilidades, competir y disfrutar del deporte en un ambiente amigable y profesional. Completa el siguiente formulario con tus datos personales y nos pondremos en contacto contigo para los próximos pasos. ¡Esperamos verte pronto en la pista!</p>
+   
+        <hr class="border-gray-900 my-5">
+
+        <h3 class="text-3xl mb-3">Rellena el formulario</h3>
+
+        <form action="#" class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-8">
+            
+          <include src="./components/input.html"
+          locals='{
+            "className": "col-span-8 md:col-span-4",
+            "inputLabel": "Nombre",
+            "inputId" : "nameInput",
+            "inputType" : "text",
+            "inputPlaceholder" : "Escribe tu nombre"}'>
+          </include>
+          
+          <include src="./components/input.html"
+          locals='{
+            "className": "col-span-8 md:col-span-4",
+            "inputLabel": "Apellidos",
+            "inputId" : "surenameInput",
+            "inputType" : "text",
+            "inputPlaceholder" : "Escribe tu apellido"}'>
+          </include>
+
+          <include src="./components/input.html"
+          locals='{
+            "className": "col-span-8",
+            "inputLabel": "Correo Electrónico",
+            "inputId" : "emailInput",
+            "inputType" : "email",
+            "inputPlaceholder" : "Escribe tu correo electrónico"}'>
+          </include>
+          
+          <div class="col-span-8 lg:col-span-3">
+            <label class="label" for="telephonInput">Telefono de Contacto</label>
+            <div class="flex">
+              <span class="flex select-none items-center pl-3 text-gray-900 sm:text-sm mr-3">+34</span>
+              <input type="text" class="input" id="telephonInput" placeholder="666 555 333">
+            </div>
+          </div>
+            
+          <div class="col-span-8 sm:col-span-4 lg:col-span-3">
+            <label class="label" for="citySelector">Ciudad</label>
+            <select class="input p-2.5" id="citySelector" aria-label="Default select example">
+              <option selected>Selecciona tu ciudad de residencia</option>
+              <option value="1">Burriana</option>
+              <option value="2">Villareal</option>
+              <option value="3">Castellón</option>
+            </select>
+          </div>
+
+          <include src="./components/input.html"
+          locals='{
+            "className": "col-span-8 sm:col-span-4 lg:col-span-2",
+            "inputLabel": "Código Postal",
+            "inputId" : "postalInput",
+            "inputType" : "number",
+            "inputPlaceholder" : "Escribe tu código postal"}'>
+          </include>
+
+            <div class="col-span-8">
+              <label class="label" for="sportSelector">Deporte</label>
+              <select class="input p-2.5" id="sportSelector" aria-label="Default select example">
+                <option selected>Selecciona el deporte que más te interesa</option>
+                <option value="1">Natación</option>
+                <option value="2">Tenis</option>
+                <option value="3">Carrera de Velocidad</option>
+                <option value="4">Salto de valla</option>
+                <option value="5">Futbol</option>
+              </select>
+            </div>
+
+            <div class="col-span-8">
+              <label class="label" for="comentTextArea">Tienes alguna necesidad especial o necesitas saber algo, ¡Comentanos!</label>
+              <textarea class="input" placeholder="Escribe tu comentario" id="comentTextArea" style="height: 100px"></textarea>
+            </div>
+
+            <div class="col-span-8">
+              <input class="h-4 w-4 rounded border-gray-300" type="checkbox" value="" id="policyCheck">
+              <label class="text-sm" for="policyCheck">
+                Acepto el tratamiento de mis datos personales de acuerdo con la <a href="#" class="underline ">Política de Privacidad</a>
+              </label>
+            </div>
+            
+            <div class="col-span-8">
+              <input class="h-4 w-4 rounded border-gray-300" type="checkbox" value="" id="newsletterCheck">
+              <label class="text-sm" for="newsletterCheck">
+                Quiero recibir información sobre el club
+              </label>
+            </div>
+          
+            <div class="col-12 w-75">
+              <button type="submit" class="rounded-md p-2 my-2 bg-primary">Inscribirse</button>
+            </div>
+          
+
+        </form>
+        
+     </div>
+    </main>
+
+    <include src="./views/footer-tailwind.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>
