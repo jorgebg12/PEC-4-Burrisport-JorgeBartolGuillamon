@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 
 <html lang="es">
-  <head>
+  <head><link rel="stylesheet" href="index.47769f60.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Formulario de inscripción utilizando tailwind">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/tailwind.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="article-tailwind.da1f38fc.css"><!-- do not remove this line! -->
     <title>PEC-4 | Form-taildwind</title>
   </head>
   <body class="home">
 
-    <include src="./views/header-tailwind.html"></include>
+    <header class="bg-primary header-footer-general">
+    <div class="logo">
+        <a href="index.html">BURR <i class="fa-solid fa-person-running"></i> SPORT</a>
+    </div>
+    <nav>
+        <ul class="header-footer-list">
+            <li><a href="members.html">Miembros</a></li>
+            <li><a href="article.html">Artículo</a></li>
+            <li><a href="form.html">Formulario</a></li>
+            <li><a href="article-tailwind.html">Articulo-TW</a></li>
+            <li><a href="form-tailwind.html">Form-TW</a></li>
+            <li><a href="AI-Page.html">Página IA</a></li>
+        </ul>
+    </nav>
+</header>
     
     <main>
 
@@ -25,32 +39,20 @@
 
         <form action="#" class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-8">
             
-          <include src="./components/input.html"
-          locals='{
-            "className": "col-span-8 md:col-span-4",
-            "inputLabel": "Nombre",
-            "inputId" : "nameInput",
-            "inputType" : "text",
-            "inputPlaceholder" : "Escribe tu nombre"}'>
-          </include>
+          <div class="col-span-8 md:col-span-4">
+    <label class="label" for="nameInput">Nombre</label>
+    <input type="text" class="input" id="nameInput" placeholder="Escribe tu nombre">
+</div>
           
-          <include src="./components/input.html"
-          locals='{
-            "className": "col-span-8 md:col-span-4",
-            "inputLabel": "Apellidos",
-            "inputId" : "surenameInput",
-            "inputType" : "text",
-            "inputPlaceholder" : "Escribe tu apellido"}'>
-          </include>
+          <div class="col-span-8 md:col-span-4">
+    <label class="label" for="surenameInput">Apellidos</label>
+    <input type="text" class="input" id="surenameInput" placeholder="Escribe tu apellido">
+</div>
 
-          <include src="./components/input.html"
-          locals='{
-            "className": "col-span-8",
-            "inputLabel": "Correo Electrónico",
-            "inputId" : "emailInput",
-            "inputType" : "email",
-            "inputPlaceholder" : "Escribe tu correo electrónico"}'>
-          </include>
+          <div class="col-span-8">
+    <label class="label" for="emailInput">Correo Electrónico</label>
+    <input type="email" class="input" id="emailInput" placeholder="Escribe tu correo electrónico">
+</div>
           
           <div class="col-span-8 lg:col-span-3">
             <label class="label" for="telephonInput">Telefono de Contacto</label>
@@ -63,26 +65,22 @@
           <div class="col-span-8 sm:col-span-4 lg:col-span-3">
             <label class="label" for="citySelector">Ciudad</label>
             <select class="input p-2.5" id="citySelector" aria-label="Default select example">
-              <option selected>Selecciona tu ciudad de residencia</option>
+              <option selected="">Selecciona tu ciudad de residencia</option>
               <option value="1">Burriana</option>
               <option value="2">Villareal</option>
               <option value="3">Castellón</option>
             </select>
           </div>
 
-          <include src="./components/input.html"
-          locals='{
-            "className": "col-span-8 sm:col-span-4 lg:col-span-2",
-            "inputLabel": "Código Postal",
-            "inputId" : "postalInput",
-            "inputType" : "number",
-            "inputPlaceholder" : "Escribe tu código postal"}'>
-          </include>
+          <div class="col-span-8 sm:col-span-4 lg:col-span-2">
+    <label class="label" for="postalInput">Código Postal</label>
+    <input type="number" class="input" id="postalInput" placeholder="Escribe tu código postal">
+</div>
 
             <div class="col-span-8">
               <label class="label" for="sportSelector">Deporte</label>
               <select class="input p-2.5" id="sportSelector" aria-label="Default select example">
-                <option selected>Selecciona el deporte que más te interesa</option>
+                <option selected="">Selecciona el deporte que más te interesa</option>
                 <option value="1">Natación</option>
                 <option value="2">Tenis</option>
                 <option value="3">Carrera de Velocidad</option>
@@ -120,8 +118,26 @@
      </div>
     </main>
 
-    <include src="./views/footer-tailwind.html"></include>
+    <footer class="bg-secondary header-footer-general">
+    <div class="logo">
+        <a href="index.html">BURR <i class="fa-solid fa-person-running"></i> SPORT</a>
+    </div>
+    <ul class="header-footer-list">
+        <li class="mx-3 hover:text-contrast-color"><a href="index.html">Home</a></li>
+        <li class="mx-3 hover:text-contrast-color"><a href="members.html">Miembros</a></li>
+        <li class="mx-3 hover:text-contrast-color"><a href="article.html">Artículo</a></li>
+        <li class="mx-3 hover:text-contrast-color"><a href="form.html">Formulario</a></li>
+        <li class="mx-3 hover:text-contrast-color"><a href="article-tailwind.html">Article-tailwind</a></li>
+        <li class="mx-3 hover:text-contrast-color"><a href="form-tailwind.html">Form-tailwind</a></li>
+        <li class="mx-3 hover:text-contrast-color"><a href="AI-Page.html">Página IA</a></li>
+    </ul>
+    <ul class="flex flex-row gap-3">
+        <li class="hover:text-contrast-color"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        <li class="hover:text-contrast-color"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li class="hover:text-contrast-color"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+    </ul>
+</footer>
 
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script src="index.abdb1b70.js" defer=""></script><!-- do not remove this line! -->
   </body>
 </html>

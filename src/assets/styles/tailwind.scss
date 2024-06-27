@@ -15,7 +15,7 @@
     }
 
     .logo {
-        @apply text-xl md:text-2xl lg:text-4xl
+        @apply text-xl md:text-2xl lg:text-4xl hover:text-contrast-color;
     }
     
     .common-container {
