@@ -7,7 +7,7 @@
 @layer base {
 
     .header-footer-general {
-      @apply p-6 flex flex-col gap-8 items-center justify-between lg:flex-row min-h-10vh;
+      @apply p-6 flex flex-col gap-8 items-center justify-between md:flex-row min-h-10vh;
     }
 
     .header-footer-list{
@@ -19,7 +19,7 @@
     }
     
     .common-container {
-        @apply container mx-auto max-w-3xl py-7 px-6 bg-secondary;
+        @apply container mx-auto max-w-screen-md py-7 px-6 bg-secondary;
     }
 
     .label {
